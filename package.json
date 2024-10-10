@@ -82,6 +82,7 @@
   },
   "scripts": {
     "start": "webpack serve -c webpack.dev.js",
+    "start-prod": "webpack serve -c webpack.prod.js",
     "lint": "tsc --noEmit",
     "test": "jest",
     "postinstall": "npm run gen-schema",
@@ -101,7 +102,6 @@
     "build-and-upload": "run-s build upload",
     "cloudfront-invalidate": "aws cloudfront create-invalidation --distribution-id E2LM6EIHUKJUXG --paths '/*' | cat",
     "check-invalidate": "aws cloudfront get-invalidation --distribution-id E2LM6EIHUKJUXG --id",
-    "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "gen-schema": "json2ts json-schema.draft-07.json > src/schema.ts"
   }
