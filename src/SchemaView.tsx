@@ -105,6 +105,17 @@ export class SchemaViewWR extends React.PureComponent<SchemaViewProps, SchemaVie
     const generatedExample = generateJsonExampleFor(schema, lookup, 'both');
     const fullExample: unknown = isErrors(generatedExample) ? {} : generatedExample.value;
 
+
+    // <SchemaViewWR.EditorContainer>
+    //   <SchemaEditor
+    //     initialContent={fullExample}
+    //     schema={schema}
+    //     validationRange={this.state.selectedValidationRange}
+    //     onValidate={(results) => this.setState({ validationResults: results })}
+    //   />
+    //   <SchemaViewWR.EditorContainerHeading>Editor and Validator</SchemaViewWR.EditorContainerHeading>
+    // </SchemaViewWR.EditorContainer>
+
     return (
       <SchemaViewWR.Container>
         <SideNavWithRouter basePathSegments={basePathSegments} links={extractLinks(schema, lookup)} />
@@ -117,15 +128,6 @@ export class SchemaViewWR extends React.PureComponent<SchemaViewProps, SchemaVie
           onSelectValidationRange={(range) => this.setState({ selectedValidationRange: range })}
           validationResults={this.state.validationResults}
         />
-        <SchemaViewWR.EditorContainer>
-          <SchemaEditor
-            initialContent={fullExample}
-            schema={schema}
-            validationRange={this.state.selectedValidationRange}
-            onValidate={(results) => this.setState({ validationResults: results })}
-          />
-          <SchemaViewWR.EditorContainerHeading>Editor and Validator</SchemaViewWR.EditorContainerHeading>
-        </SchemaViewWR.EditorContainer>
       </SchemaViewWR.Container>
     );
   }

@@ -5,6 +5,7 @@ const config = {
     '@babel/preset-react',
   ],
   plugins: [
+    '@babel/plugin-proposal-class-properties',
     '@compiled/babel-plugin',
     '@babel/transform-runtime',
   ],
