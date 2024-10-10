@@ -25,7 +25,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ],
+    extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
     filename: 'bundle.[chunkhash].js',
@@ -47,7 +47,8 @@ module.exports = {
       'process.release': null
     }),
     new webpack.EnvironmentPlugin({
-      ANALYTICS_NEXT_MODERN_CONTEXT: true
+      ANALYTICS_NEXT_MODERN_CONTEXT: true,
+      SCHEMA_BASE_URL: process.env.SCHEMA_BASE_URL || "http://localhost:8080"
     }),
     new FaviconsWebpackPlugin({
       logo: './src/logo.svg',

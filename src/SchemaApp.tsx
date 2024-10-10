@@ -59,7 +59,7 @@ const ExampleMenu: React.FC<ContentPropsWithClose> = (props) => (
       <Section key={title} title={title}>
         {Array.from(Object.entries(links)).map(([linkTitle, url]) => (
           <NavigationButtonItem key={url} onClick={props.closePopup} exampleUrl={url}>{linkTitle}</NavigationButtonItem>
-          ))}
+        ))}
       </Section>
     ))}
     <Section title="Schema repositories">
@@ -125,7 +125,7 @@ class SchemaAppWR extends React.PureComponent<RouteComponentProps, SchemaAppStat
 
   };
 
-   render() {
+  render() {
     const primaryItems = [
       <PrimaryDropdown content={props => <ExampleMenu {...props} />} text="Examples" />,
       <PrimaryDropdown content={props => <HelpMenu {...props} />} text="Help" />
@@ -138,14 +138,9 @@ class SchemaAppWR extends React.PureComponent<RouteComponentProps, SchemaAppStat
       );
     }
 
+
     return (
       <div>
-        <AtlassianNavigation
-          label="Json schema viewer header"
-          primaryItems={primaryItems}
-          renderCreate={NewSchema}
-          renderProductHome={JsonSchemaHome}
-        />
         <Switch>
           <Route exact={true} path="/"><Redirect to="/start" /></Route>
           <Route exact={true} path="/start">

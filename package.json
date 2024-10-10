@@ -17,6 +17,7 @@
     "@atlaskit/lozenge": "^10.1.0",
     "@atlaskit/menu": "^0.7.0",
     "@atlaskit/popup": "^1.0.6",
+    "@atlaskit/select": "^18.0.0",
     "@atlaskit/spinner": "^15.0.6",
     "@atlaskit/table": "^0.4.6",
     "@atlaskit/tabs": "^12.1.2",
