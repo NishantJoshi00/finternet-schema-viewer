@@ -96,7 +96,7 @@ const HelpMenu: React.FC<ContentPropsWithClose> = (props) => {
 
 const NewSchema: React.FC = () => {
   const history = useHistory();
-  const isStart = history.location.pathname === '/start';
+  const isStart = history.location.pathname === '/';
   if (isStart) {
     return <></>;
   }
@@ -138,12 +138,12 @@ class SchemaAppWR extends React.PureComponent<RouteComponentProps, SchemaAppStat
       );
     }
 
+    // <Route exact={true} path="/"><Redirect to="/start" /></Route>
 
     return (
       <div>
         <Switch>
-          <Route exact={true} path="/"><Redirect to="/start" /></Route>
-          <Route exact={true} path="/start">
+          <Route exact={true} path="/">
             <Start />
           </Route>
           <Route path="/view">
