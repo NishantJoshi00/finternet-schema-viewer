@@ -89,7 +89,7 @@
     "postinstall": "npm run gen-schema",
     "build-dev": "webpack -c webpack.dev.js",
     "build-prod": "webpack -c webpack.prod.js",
-    "build": "rm -fr dist && webpack -c webpack.dev.js",
+    "build": "rm -fr dist && webpack -c webpack.prod.js",
     "clean": "rm -rf *.zip source/witch/nodejs/node_modules/",
     "pack-witch": "cd aws/witch && npm install --prefix nodejs mime-types && cp witch.js nodejs/node_modules/ && zip -r ../../witch.zip nodejs",
     "pack-secured-headers": "cd aws/secured-headers/ && zip -r ../../s-headers.zip index.js",
