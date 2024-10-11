@@ -143,7 +143,6 @@ class SchemaAppWR extends React.PureComponent<RouteComponentProps, SchemaAppStat
       <div>
         <Switch>
           <Route exact={true} path="/"><Redirect to="/start" /></Route>
-          <Route exact={true} path=""><Redirect to="/start" /></Route>
           <Route exact={true} path="/start">
             <Start />
           </Route>
