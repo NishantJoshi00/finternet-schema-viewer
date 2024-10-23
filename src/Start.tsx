@@ -82,8 +82,8 @@ export class StartWR extends React.PureComponent<StartProps, StartState> {
   render() {
     return (
       <EmptyState
-        header="Load a JSON Schema"
-        description="Select the JSON schema that you want to see documented here."
+        header="Search for Finternet Schema"
+        description="Select the schema that you want to see documented here."
         primaryAction={(
           <StartWR.InputWidth>
             <StartWR.Flex>
